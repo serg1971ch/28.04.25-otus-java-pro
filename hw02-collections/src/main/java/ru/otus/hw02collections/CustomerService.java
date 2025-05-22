@@ -1,4 +1,4 @@
-package ru.otus.homework;
+package ru.otus.hw02collections;
 
 import java.util.AbstractMap;
 import java.util.Comparator;

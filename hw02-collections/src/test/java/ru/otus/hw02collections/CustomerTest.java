@@ -1,15 +1,15 @@
-package homework;
+package ru.otus.hw02collections;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
+
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import ru.otus.homework.Customer;
-import ru.otus.homework.CustomerReverseOrder;
-import ru.otus.homework.CustomerService;
+import ru.otus.hw02collections.Customer;
 
 class CustomerTest {
 
@@ -31,7 +31,6 @@ class CustomerTest {
     }
 
     @Test
-    @Disabled("надо удалить") // надо удалить
     @DisplayName("Объект Customer как ключ в карте")
     void customerAsKeyTest() {
         // given
@@ -59,7 +58,6 @@ class CustomerTest {
     }
 
     @Test
-    @Disabled("надо удалить") // надо удалить
     @DisplayName("Сортировка по полю score, итерация по возрастанию")
     void scoreSortingTest() {
         // given
@@ -99,7 +97,6 @@ class CustomerTest {
     }
 
     @Test
-    @Disabled("надо удалить") // надо удалить
     @DisplayName("Модификация коллекции")
     void mutationTest() {
         // given
@@ -121,7 +118,6 @@ class CustomerTest {
     }
 
     @Test
-    @Disabled("надо удалить") // надо удалить
     @DisplayName("Возвращание в обратном порядке")
     void reverseOrderTest() {
         // given
@@ -148,5 +144,41 @@ class CustomerTest {
         Customer customerFirst = customerReverseOrder.take();
         // then
         assertThat(customerFirst).usingRecursiveComparison().isEqualTo(customer1);
+    }
+    @Test
+    void equalsAndHashCodeTest_equals() {
+        // given
+        Customer customer1 = new Customer(1, "John", 10);
+        Customer customer2 = new Customer(1, "John", 10);
+
+        // then
+        // Поля у обоих объектов равны => через equals точно должны быть равны,
+        // даже если в других тестах логика такая, что сравнивать нужно не по всем полям:
+        assertThat(customer1.equals(customer2)).isTrue();
+    }
+
+    @Test
+    void equalsAndHashCodeTest_hashCodes() {
+        // given
+        Customer customer1 = new Customer(1, "John", 10);
+        Customer customer2 = new Customer(1, "John", 10);
+
+        // then
+        // Раз через equals объекты равны, то и хэшкоды должны совпадать:
+        assertThat(customer1.hashCode()).isEqualTo(customer2.hashCode());
+    }
+
+    @Test
+    void equalsAndHashCodeTest_hashSet() {
+        // given
+        Customer customer1 = new Customer(1, "John", 10);
+        Customer customer2 = new Customer(1, "John", 10);
+
+        // then
+        // Объекты эквивалентны => в Set должен попасть только один объект
+        Set<Customer> customers = new HashSet<>();
+        customers.add(customer1);
+        customers.add(customer2);
+        assertThat(customers.size()).isEqualTo(1);
     }
 }

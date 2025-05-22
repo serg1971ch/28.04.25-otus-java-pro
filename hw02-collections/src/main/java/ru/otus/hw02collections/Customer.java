@@ -1,4 +1,4 @@
-package ru.otus.homework;
+package ru.otus.hw02collections;
 
 import java.util.Objects;
 
@@ -46,15 +46,19 @@ public class Customer {
         return "Customer{" + "id=" + id + ", name='" + name + '\'' + ", scores=" + scores + '}';
     }
 
-    public boolean equals(Object object) {
-        if (this == object) return true;
-        if (object == null || getClass() != object.getClass()) return false;
-        if (!super.equals(object)) return false;
-        Customer customer = (Customer) object;
-        return name.equals(customer.name);
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Customer customer = (Customer) o;
+        return Objects.equals(name, customer.name);
     }
 
+    @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), name);
+        int result = Long.hashCode(id);
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        return result;
     }
 }
+

@@ -1,7 +1,8 @@
-package ru.otus.homework;
+package ru.otus.hw02collections;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
+import ru.otus.hw02collections.Customer;
 
 public class CustomerReverseOrder {
 
