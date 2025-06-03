@@ -1,0 +1,12 @@
+[2025-06-03T21:24:26.681+0300][0.060s][info][gc] Using G1
+[2025-06-03T21:24:26.681+0300][0.061s][debug][gc] ConcGCThreads: 3 offset 22
+[2025-06-03T21:24:26.681+0300][0.061s][debug][gc] ParallelGCThreads: 10
+[2025-06-03T21:24:26.682+0300][0.062s][debug][gc] Initialize mark stack with 4096 chunks, maximum 524288
+[2025-06-03T21:24:26.913+0300][0.293s][info ][gc] GC(0) Pause Young (Concurrent Start) (G1 Humongous Allocation) 3M->0M(256M) 4.552ms
+[2025-06-03T21:24:26.913+0300][0.293s][info ][gc] GC(1) Concurrent Undo Cycle
+[2025-06-03T21:24:26.915+0300][0.296s][info ][gc] GC(2) Pause Young (Normal) (G1 Humongous Allocation) 0M->0M(256M) 3.180ms
+[2025-06-03T21:24:26.954+0300][0.335s][debug][gc] GC(3) Clear Bitmap 0.920ms
+[2025-06-03T21:24:26.964+0300][0.344s][info ][gc] GC(3) Pause Full (G1 Compaction Pause) 0M->0M(256M) 9.694ms
+[2025-06-03T21:24:26.964+0300][0.345s][debug][gc] GC(4) Clear Bitmap 0.434ms
+[2025-06-03T21:24:26.974+0300][0.355s][info ][gc] GC(4) Pause Full (G1 Compaction Pause) 0M->0M(256M) 10.802ms
+[2025-06-03T21:24:26.974+0300][0.355s][info ][gc] GC(1) Concurrent Undo Cycle 62.025ms
