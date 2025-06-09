@@ -1,0 +1,11 @@
+[2025-06-03T21:21:19.921+0300][0.019s][info][gc] Using G1
+[2025-06-03T21:21:19.923+0300][0.020s][debug][gc] ConcGCThreads: 3 offset 22
+[2025-06-03T21:21:19.923+0300][0.020s][debug][gc] ParallelGCThreads: 10
+[2025-06-03T21:21:19.923+0300][0.020s][debug][gc] Initialize mark stack with 4096 chunks, maximum 524288
+[2025-06-03T21:21:20.400+0300][0.497s][info ][gc] GC(0) Pause Young (Normal) (G1 Evacuation Pause) 433M->383M(1024M) 4.180ms
+[2025-06-03T21:21:20.452+0300][0.550s][info ][gc] GC(1) Pause Young (Normal) (G1 Evacuation Pause) 447M->383M(1024M) 2.792ms
+[2025-06-03T21:21:21.019+0300][1.118s][info ][gc] GC(2) Pause Young (Normal) (G1 Evacuation Pause) 969M->383M(1024M) 3.748ms
+[2025-06-03T21:21:21.473+0300][1.572s][info ][gc] GC(3) Pause Young (Normal) (G1 Evacuation Pause) 969M->383M(1024M) 4.030ms
+[2025-06-03T21:21:21.902+0300][2.011s][info ][gc] GC(4) Pause Young (Normal) (G1 Evacuation Pause) 969M->383M(1024M) 3.911ms
+[2025-06-03T21:21:22.367+0300][2.465s][info ][gc] GC(5) Pause Young (Normal) (G1 Evacuation Pause) 969M->383M(1024M) 4.111ms
+[2025-06-03T21:21:22.795+0300][2.893s][info ][gc] GC(6) Pause Young (Normal) (G1 Evacuation Pause) 969M->383M(1024M) 3.729ms
