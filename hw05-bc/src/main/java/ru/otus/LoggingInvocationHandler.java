@@ -6,10 +6,12 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import java.util.logging.Logger;
 
 public class LoggingInvocationHandler implements InvocationHandler {
     private final Object target;
     private final Map<String, Set<String>> methodSignatures;
+    private Logger logger = Logger.getLogger(LoggingInvocationHandler.class.getName());
 
     public LoggingInvocationHandler(Object target) {
         this.target = target;
@@ -33,7 +35,7 @@ public class LoggingInvocationHandler implements InvocationHandler {
                 && methodSignatures.get(method.getName()).contains(currentSignature)) {
 
             String params = formatParams(args);
-            System.out.println("executed method: " + method.getName() + ", param: " + params);
+            logger.info("executed method: " + method.getName() + ", param: " + params);
         }
 
         return method.invoke(target, args);
