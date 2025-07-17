@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="82f90e37-1dd1-4f4c-a359-488918487a95" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw02-collections/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/hw02-collections/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw02-collections/src/main/java/ru/otus/hw02collections/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw02-collections/src/main/java/ru/otus/hw02collections/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw02-collections/src/main/java/ru/otus/hw02collections/CustomerReverseOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw02-collections/src/main/java/ru/otus/hw02collections/CustomerReverseOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw02-collections/src/test/java/ru/otus/hw02collections/CustomerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw02-collections/src/test/java/ru/otus/hw02collections/CustomerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw05-bc/src/main/java/ru/otus/LoggingInvocationHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw05-bc/src/main/java/ru/otus/LoggingInvocationHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "serg1971ch"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:serg1971ch/28.04.25-otus-java-pro.git",
+    "accountId": "e6017f17-22b6-4f4c-9bca-df8a98980c29"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2zxCmEQfPL1ywVEoFyBGXMrXDEK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "#4 on bc",
+    "kotlin-language-version-configured": "true",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="82f90e37-1dd1-4f4c-a359-488918487a95" name="Changes" comment="" />
+      <created>1752663498174</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1752663498174</updated>
+      <workItem from="1752663501271" duration="306000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

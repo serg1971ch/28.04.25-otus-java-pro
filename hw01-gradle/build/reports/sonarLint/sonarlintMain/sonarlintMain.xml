@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle>
+  <file name="C:\Users\Honor\Desktop\28.04.25-otus\hw01-gradle\src\main\java\ru\otus\HelloOtus.java">
+    <error severity="error" line="9" column="27" message="Define a constant instead of duplicating this literal &quot;============================================&quot; 3 times." source="java:S1192" />
+    <error severity="warning" line="9" column="8" message="Replace this use of System.out by a logger." source="java:S106" />
+    <error severity="warning" line="10" column="8" message="Replace this use of System.out by a logger." source="java:S106" />
+    <error severity="warning" line="13" column="8" message="Replace this use of System.out by a logger." source="java:S106" />
+    <error severity="warning" line="14" column="8" message="Replace this use of System.out by a logger." source="java:S106" />
+    <error severity="warning" line="15" column="8" message="Replace this use of System.out by a logger." source="java:S106" />
+  </file>
+</checkstyle>
