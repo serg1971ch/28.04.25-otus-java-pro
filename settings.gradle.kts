@@ -22,3 +22,8 @@ pluginManagement {
         id("com.diffplug.spotless") version spotless
     }
 }
+include("hw03-annotation")
+include("hw03-annotation:hw04-gc")
+findProject(":hw03-annotation:hw04-gc")?.name = "hw04-gc"
+include("hw04-gc")
+include("untitled")
