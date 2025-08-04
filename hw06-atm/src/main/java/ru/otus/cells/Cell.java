@@ -1,15 +1,14 @@
 package ru.otus.cells;
 
 import ru.otus.domain.Banknote;
+import ru.otus.exceptions.CellOperationException;
 
-import java.util.NoSuchElementException;
+public interface Cell<T extends Banknote> {
+    T extract() throws CellOperationException;
 
-public interface Cell {
-	Banknote getBanknote() throws NoSuchElementException;
+    void insertBanknote(T banknote) throws CellOperationException;
 
-	void addBanknote(final Banknote banknote) throws IllegalArgumentException;
+    int getBanknotesAmount();
 
-	int calculateBalance();
-
-	int size();
+    Integer getDenomination();
 }

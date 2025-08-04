@@ -1,19 +1,11 @@
 package ru.otus.domain;
 
-public enum Banknote {
-	FIFTY(50),
-	HUNDRED(100),
-	FIVE_HUNDRED(500),
-	THOUSAND(1000),
-	FIVE_THOUSAND(5000);
+import static java.util.Objects.requireNonNull;
 
-	private final int value;
-
-	Banknote(final int value) {
-		this.value = value;
-	}
-
-	public int getValue() {
-		return value;
-	}
+public record Banknote(Integer denomination, Currency currency) {
+    public Banknote {
+        requireNonNull(currency);
+        requireNonNull(denomination);
+        if (!currency.getAcceptableDenominations().contains(denomination)) throw new IllegalArgumentException();
+    }
 }
