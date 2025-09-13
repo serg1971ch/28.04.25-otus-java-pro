@@ -73,17 +73,17 @@ class AppTest {
         }
     }
 
-    @Disabled("Эту аннотацию надо убрать")
-    @DisplayName("В контексте не должно быть компонентов с одинаковым именем")
+//    @Disabled("Эту аннотацию надо убрать")
+//    @DisplayName("В контексте не должно быть компонентов с одинаковым именем")
     @Test
     void shouldNotAllowTwoComponentsWithSameName() {
         assertThatCode(() -> new AppComponentsContainerImpl(ConfigWithTwoComponentsWithSameName.class))
                 .isInstanceOf(Exception.class);
     }
 
-    @Disabled("Эту аннотацию надо убрать")
-    @DisplayName(
-            "При попытке достать из контекста отсутствующий или дублирующийся компонент, должно выкидываться исключение")
+//    @Disabled("Эту аннотацию надо убрать")
+//    @DisplayName(
+//            "При попытке достать из контекста отсутствующий или дублирующийся компонент, должно выкидываться исключение")
     @Test
     void shouldThrowExceptionWhenContainerContainsMoreThanOneOrNoneExpectedComponents()
             throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {

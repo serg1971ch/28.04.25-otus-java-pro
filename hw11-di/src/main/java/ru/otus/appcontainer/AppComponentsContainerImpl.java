@@ -28,8 +28,16 @@ public class AppComponentsContainerImpl implements AppComponentsContainer {
                 .sorted(comparing(m -> m.getAnnotation(AppComponent.class).order()))
                 .toList();
 
+        Set<String> registeredComponentNames = new HashSet<>();
+
         try {
             for (var method : beanMethods) {
+                String beanName = method.getAnnotation(AppComponent.class).name();
+                if (registeredComponentNames.contains(beanName)) {
+                    throw new IllegalArgumentException("Duplicate component name: " + beanName);
+                }
+                registeredComponentNames.add(beanName);
+
                 Object[] args = stream(method.getParameterTypes())
                         .map(this::getAppComponent)
                         .toArray();
@@ -38,21 +46,9 @@ public class AppComponentsContainerImpl implements AppComponentsContainer {
                         configClass.getDeclaredConstructor().newInstance();
                 Object bean = method.invoke(configClassInstance, args);
 
-                String beanName = method.getAnnotation(AppComponent.class).name();
-
                 appComponentsByName.put(beanName, bean);
                 appComponents.add(bean);
             }
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    private Object createComponent(Object obj, Method method) {
-        try {
-            Class<?>[] parameterTypes = method.getParameterTypes();
-            Object[] args = stream(parameterTypes).map(this::getAppComponent).toArray();
-            return method.invoke(obj, args);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -65,18 +61,22 @@ public class AppComponentsContainerImpl implements AppComponentsContainer {
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public <C> C getAppComponent(Class<C> componentClass) {
-        return (C) appComponents.stream()
-                .filter(component -> componentClass.isAssignableFrom(component.getClass()))
-                .findFirst()
-                .orElseThrow(
-                        () -> new NoSuchElementException(format("Component with type %s not found!", componentClass)));
+        List<Object> beans = appComponents.stream()
+                .filter(b -> componentClass.isAssignableFrom(b.getClass()))
+                .toList();
+
+        if (beans.size() != 1)
+            throw new RuntimeException(format("Failed to determine bean in %s", componentClass.getName()));
+
+        return (C) beans.get(0);
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public <C> C getAppComponent(String componentName) {
-        return (C) Optional.ofNullable(appComponentsByName.get(componentName))
-                .orElseThrow(
-                        () -> new NoSuchElementException(format("Component with name %s not found!", componentName)));
+        return ofNullable((C) appComponentsByName.get(componentName))
+                .orElseThrow(() -> new RuntimeException(format("Failed to determine bean in %s ", componentName)));
     }
 }
